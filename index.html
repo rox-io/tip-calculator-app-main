@@ -7,6 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="design/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,27 +18,57 @@
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+  <div id="bg-layer">
+    <div id="header-img">
+      <img src="images/logo.svg" alt="heading logo">
+    </div>
+    <div id="main-layer">
+      <div id="col-left" class="columns">
+        <div id="section-a" class="col-left-sections">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill-input" name="bill" min="0" step="0.01" placeholder="0">
+        </div>
+        <div id="section-b" class="col-left-sections">
+          <label for="tip-perc">Select Tip %</label>
+          <div id="tip-wrapper">
+            <button class="tip-btn" name="tip-perc" value="5">5%</button>
+            <button class="tip-btn" name="tip-perc" value="10">10%</button>
+            <button class="tip-btn" name="tip-perc" value="15">15%</button>
+            <button class="tip-btn" name="tip-perc" value="25">25%</button>
+            <button class="tip-btn" name="tip-perc" value="50">50%</button>
+            <input type="number" id="custom-input" name="tip-perc" min="0" placeholder="Custom">
+          </div>
+        </div>
+        <div id="section-c" class="col-left-sections">
+          <label for="people">Number of People</label>
+          <input type="number" name="people" id="people-input" min="1" placeholder="0">
+        </div>
+      </div>
+      <div id="col-right" class="columns">
+        <div class="tip-display tip-display-tip">
+          <div class="tip-labels">
+            <h5 id="tip-label">Tip Amount</h5>
+            <div class="tip-person">/ person</div>
+          </div>
+          <div class="tip-amounts">
+            <div id="tip" class="tip-amount">$0.00</div>
+          </div>
+        </div>
+        <div class="tip-display tip-display-total">
+          <div class="tip-labels">
+            <h5 id="total-label">Total</h5>
+            <div class="tip-person">/ person</div>
+          </div>
+          <div class="tip-amounts">
+            <div id="total" class="tip-amount">$0.00</div>
+          </div>
+        </div>
+        <div id="reset">
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">rox</a>.
