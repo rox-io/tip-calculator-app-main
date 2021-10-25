@@ -62,9 +62,9 @@ body {
     border-radius: 15px;
     color: hsl(0, 0%, 100%);
     margin: 0;
-    padding: 30px 10px;
+    padding: 30px 20px 20px 20px;
     height: 30vh;
-    width: 100%;
+    width: 90%;
 }
 
 /*INPUTS*/
@@ -80,7 +80,7 @@ input[type=number] {
     text-align: right;
     margin-top: 5px;
     -moz-appearance: textfield;
-    width: 100%;
+    width: 95%;
 }
 
 input::-webkit-outer-spin-button,
@@ -129,14 +129,13 @@ input[type=number]:focus {
 }
 
 /*TIP OUTPUTS*/
-.tip-display {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.tip-display-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-#tip-amounts {
-    
+.tip-labels {
+    text-align: left;
 }
 
 #tip-label, #total-label {
@@ -149,6 +148,10 @@ input[type=number]:focus {
     font-size: .8em;
 }
 
+.tip-amounts {
+    text-align: right;
+}
+
 .tip-amount {
     font-size: 2em;
     font-weight: bold;
@@ -158,12 +161,12 @@ input[type=number]:focus {
 /*RESET BUTTON*/
 #reset {
     align-self: center;
-    width: 90%;
+    width: 100%;
 }
 
 #reset-btn {
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     background-color: hsl(183, 63%, 32%);
     border-style: none;
     border-radius: 5px;
