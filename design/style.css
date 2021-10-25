@@ -41,6 +41,13 @@ body {
 #section-a, #section-c {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+#section-a img, #section-c img {
+    position: absolute;
+    top: 63%;
+    left: 5%;
 }
 
 .col-left-sections {
@@ -57,13 +64,13 @@ body {
 #col-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: hsl(183, 100%, 15%);
     border-radius: 15px;
     color: hsl(0, 0%, 100%);
     margin: 0;
-    padding: 30px 20px 20px 20px;
-    height: 30vh;
+    padding: 30px 20px 10px 20px;
+    height: 200px;
     width: 90%;
 }
 
@@ -162,16 +169,24 @@ input[type=number]:focus {
 #reset {
     align-self: center;
     width: 100%;
+    margin-top: 20px;
 }
 
 #reset-btn {
     width: 100%;
     padding: 8px;
-    background-color: hsl(183, 63%, 32%);
     border-style: none;
     border-radius: 5px;
     font-family: 'Space Mono', monospace;
     font-size: 1em;
     font-weight: bold;
     color: hsl(183, 100%, 15%);
+}
+
+#reset-btn:hover {
+    background-color: #a0f5f8;
+}
+
+.reset-btn-focus {
+    background-color: hsl(172, 67%, 45%);
 }
