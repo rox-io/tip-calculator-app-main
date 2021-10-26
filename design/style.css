@@ -12,11 +12,11 @@ body {
     background-color: hsl(185, 41%, 84%);
     padding: 8em 1em;
 }
-
+/* HEADER LOGO */
 #header-img {
     margin-bottom: 4em;
 }
-/* MAIN CONTAINER LAYOUT */
+/* MAIN CONTAINER LAYOUT USING FLEXBOX TO CREATE TWO COLUMNS */
 #main-layer {
     display: flex;
     flex-direction: column;
@@ -29,6 +29,7 @@ body {
     padding: 0 30px 30px 30px;
 }
 
+/* ON SCREENS 768PX AND WIDER, MAIN CONTAINER LAYOUT USING FLEXBOX CHANGES FROM COLUMNS TO ROWS */
 @media only screen and (min-width: 768px) {
     #main-layer {
         flex-direction: row;
@@ -39,8 +40,8 @@ body {
     }
 }
 
-/*COLUMNS*/
-#col-left {
+/* COL-A USES FLEXBOX TO CREATE COLUMNS FOR EACH INPUT SECTION */
+#col-a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -48,36 +49,42 @@ body {
     margin: 0;
 }
 
+/* ON SCREENS 768PX AND WIDER, THE WIDTH IS SET USING FLEX-BASIS PROPERTY*/
 @media only screen and (min-width: 768px) {
-    #col-left {
+    #col-a {
         flex-basis: 45%;
     }
 }
 
+/* INPUT SECTIONS USE FLEXBOX TO CREATE COLUMNS */
 #input-section-a, #input-section-c {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
+/* IMAGES ARE ADDED TO INPUT FIELDS USING ABSOLUTE POSITIONING */
 #input-section-a img, #input-section-c img {
     position: absolute;
     top: 63%;
     left: 5%;
 }
 
+/* MARGIN IS ADDED TO INPUT SECTIONS */
 #input-section-b, #input-section-c {
     margin-top: 30px;
     
 }
 
-.col-left-sections label {
+/* LABEL STYLING FOR COL-A */
+.col-a-sections label {
     color: hsl(186, 14%, 43%);
     font-size: .8em;
     font-weight: bold;
 }
 
-#col-right {
+/* COL-B USES FLEXBOX TO CREATE COLUMNS */
+#col-b {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -90,15 +97,16 @@ body {
     width: 90%;
 }
 
+/* ON SCREENS 768PX AND WIDER, WIDTH IS SET FOR COL-B */
 @media only screen and (min-width: 768px) {
-    #col-right {
+    #col-b {
         flex-basis: 45%;
         height: 320px;
         padding: 20px 20px 10px 20px;        
     }
 }
 
-/*INPUTS*/
+/* STYLING FOR ALL NUMBER INPUTS ELEMENTS */
 input[type=number] {
     border: none;
     border-radius: 5px;
@@ -114,23 +122,27 @@ input[type=number] {
     width: 95%;
 }
 
+/* DEFAULT ARROWS ARE REMOVED FROM NUMBER INPUT ELEMENTS */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/* ADDS STYLE TO INPUT WHEN IT IS IN FOCUS */
 input[type=number]:focus {
     outline: 3px solid hsl(172, 67%, 45%);
     border-radius: 2px;
 }
 
+/* CUSTOM SIZE OF INPUT ELEMENT */ 
 #tip-wrapper input[type=number] {
     width: 75%;
     margin: 0;
     padding: 0 .8em;
 }
 
+/* ON SCREENS 768PX AND WIDER, INCREASE SIZE OF INPUT ELEMENT */
 @media only screen and (min-width: 768px) {
     #tip-wrapper input[type=number] {
         width: 80%;
@@ -139,7 +151,7 @@ input[type=number]:focus {
     }
 }
 
-/*TIP BUTTON WRAPPER*/
+/* TIP BUTTONS CONTAINER USES GRID TO CREATE 2 COLUMNS AND 3 ROWS */
 #tip-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -147,6 +159,7 @@ input[type=number]:focus {
     margin-top: 10px;
 }
 
+/* ON SCREENS 768PX AND WIDER, 3 COLUMNS AND 2 ROWS ARE CREATED */
 @media only screen and (min-width: 768px) {
     #tip-wrapper {
         grid-template-columns: repeat(3, 1fr);
@@ -154,6 +167,7 @@ input[type=number]:focus {
     }
 }
 
+/* STYLING FOR TIP BUTTONS */
 .tip-btn {
     background-color: hsl(183, 100%, 15%);
     color: hsl(189, 41%, 97%);
@@ -165,6 +179,7 @@ input[type=number]:focus {
     padding: .2em .8em;
 }
 
+/* ON SCREENS 768PX AND WIDER, FONT SIZE IS DECREASED */
 @media only screen and (min-width: 768px) {
     .tip-btn {
         font-size: 1.2em;
@@ -172,67 +187,74 @@ input[type=number]:focus {
     }
 }
 
-
-
+/* ON HOVER, TIP BUTTON STYLE CHANGES */
 .tip-btn:hover {
     background-color: #a0f5f8;
     color: black;
 }
 
+/* ON FOCUS, TIP BUTTON STYLE CHANGES */
 .tip-btn:focus {
     background-color: hsl(172, 67%, 45%);
     color: black;
 }
 
-/*TIP OUTPUTS*/
+/* TIP DISPLAY CONTAINER USES GRID TO CREATE 2 ROWS AND 2 COLUMNS */
 .tip-display-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* ON SCREENS 768PX AND WIDER, MARGIN IS ADDED FOR SPACING */
 @media only screen and (min-width: 768px) {
     .tip-display-wrapper {
         margin-bottom: 30px;
     }
 }
 
+/* TEXT ALIGNMENT FOR TIP LABEL ELEMENT */
 .tip-labels {
     text-align: left;
 }
 
+/* REMOVES DEFAULT MARGIN FOR LABEL ELEMENTS */
 #tip-label, #total-label {
     margin: 0;
 }
 
+/* STYLING FOR TIP-PERSON ELEMENT */
 .tip-person {
     font-weight: bold;
     color: hsl(184, 14%, 56%);
     font-size: .8em;
 }
 
+/* TEXT ALIGNMENT TIP AMOUNT ELEMENT */
 .tip-amounts {
     text-align: right;
 }
 
+/* STYLING FOR TIP-AMOUNT ELEMENT */
 .tip-amount {
     font-size: 2em;
     font-weight: bold;
     color: hsl(172, 67%, 45%);
 }
 
-/*RESET BUTTON*/
+/* ALIGNMENT FOR RESET BUTTON */
 #reset {
-    justify-self: flex-end;
     align-self: center;
     width: 100%;
 }
 
+/* ON SCREENS 768PX AND WIDER, ADD MARGIN TO TOP OF RESET BUTTON */
 @media only screen and (min-width: 768px) {
     #reset {
         margin-top: 30px;
     }
 }
 
+/* STYLING FOR RESET BUTTON */
 #reset-btn {
     width: 100%;
     padding: 8px;
@@ -245,14 +267,17 @@ input[type=number]:focus {
     color: hsl(184, 66%, 18%);
 }
 
+/* ON HOVER, CHANGE BACKGROUND COLOR FOR RESET BUTTON */
 #reset-btn:hover {
     background-color: #a0f5f8;
 }
 
+/* ON FOCUS, CHANGE BACKGROUND COLOR FOR RESET BUTTON */
 .reset-btn-focus {
     background-color: hsl(172, 67%, 45%);
 }
 
+/* ATTRIBUTION STYLING*/
 .attribution {
     font-size: 11px; text-align: center;
 }
