@@ -151,6 +151,11 @@ input[type=number]:focus {
     }
 }
 
+/* ADDS BORDER TO INPUT ELEMENT WHEN FUNCTION IS CALLED */
+.invalid-border {
+    outline: 3px solid rgb(201, 81, 11);
+}
+
 /* TIP BUTTONS CONTAINER USES GRID TO CREATE 2 COLUMNS AND 3 ROWS */
 #tip-wrapper {
     display: grid;
@@ -198,6 +203,19 @@ input[type=number]:focus {
     background-color: hsl(172, 67%, 45%);
     color: black;
 }
+
+/* STYLES ELEMENT WHEN FUNCTION IS CALLED */
+.invalid-text {
+    width: 39%;
+    color: rgb(201, 81, 11);
+    font-size: .8em;
+    font-weight: bold;
+    position: absolute;
+    top: .3em;
+    left: 15em;
+    text-align: right;
+}
+
 
 /* TIP DISPLAY CONTAINER USES GRID TO CREATE 2 ROWS AND 2 COLUMNS */
 .tip-display-wrapper {
@@ -270,11 +288,6 @@ input[type=number]:focus {
 /* ON HOVER, CHANGE BACKGROUND COLOR FOR RESET BUTTON */
 #reset-btn:hover {
     background-color: #a0f5f8;
-}
-
-/* ON FOCUS, CHANGE BACKGROUND COLOR FOR RESET BUTTON */
-.reset-btn-focus {
-    background-color: hsl(172, 67%, 45%);
 }
 
 /* ATTRIBUTION STYLING*/
