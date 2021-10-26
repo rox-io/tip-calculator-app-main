@@ -14,7 +14,7 @@ body {
 }
 
 #header-img {
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 /* MAIN CONTAINER LAYOUT */
 #main-layer {
@@ -24,9 +24,19 @@ body {
     align-items: center;
     background-color: hsl(0, 0%, 100%);
     width: 320px;
-    height: 770px;
+    height: 750px;
     border-radius: 25px;
     padding: 0 30px 30px 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    #main-layer {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 670px;
+        height: 310px;
+        padding: 50px 30px;
+    }
 }
 
 /*COLUMNS*/
@@ -38,27 +48,33 @@ body {
     margin: 0;
 }
 
-#section-a, #section-c {
+@media only screen and (min-width: 768px) {
+    #col-left {
+        flex-basis: 45%;
+    }
+}
+
+#input-section-a, #input-section-c {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-#section-a img, #section-c img {
+#input-section-a img, #input-section-c img {
     position: absolute;
     top: 63%;
     left: 5%;
 }
 
-.col-left-sections {
-    margin-top: 20px;
+#input-section-b, #input-section-c {
+    margin-top: 30px;
     
 }
 
 .col-left-sections label {
     color: hsl(186, 14%, 43%);
+    font-size: .8em;
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
 #col-right {
@@ -72,6 +88,14 @@ body {
     padding: 30px 20px 10px 20px;
     height: 200px;
     width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    #col-right {
+        flex-basis: 45%;
+        height: 320px;
+        padding: 20px 20px 10px 20px;        
+    }
 }
 
 /*INPUTS*/
@@ -101,10 +125,18 @@ input[type=number]:focus {
     border-radius: 2px;
 }
 
-#section-b input[type=number] {
+#tip-wrapper input[type=number] {
     width: 75%;
     margin: 0;
     padding: 0 .8em;
+}
+
+@media only screen and (min-width: 768px) {
+    #tip-wrapper input[type=number] {
+        width: 80%;
+        font-size: 1.2em;
+        padding: 0 .5em;
+    }
 }
 
 /*TIP BUTTON WRAPPER*/
@@ -112,6 +144,14 @@ input[type=number]:focus {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    #tip-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: .7em;
+    }
 }
 
 .tip-btn {
@@ -124,6 +164,15 @@ input[type=number]:focus {
     font-weight: bold;
     padding: .2em .8em;
 }
+
+@media only screen and (min-width: 768px) {
+    .tip-btn {
+        font-size: 1.2em;
+        padding: .4em 1.5em;
+    }
+}
+
+
 
 .tip-btn:hover {
     background-color: #a0f5f8;
@@ -139,6 +188,12 @@ input[type=number]:focus {
 .tip-display-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (min-width: 768px) {
+    .tip-display-wrapper {
+        margin-bottom: 30px;
+    }
 }
 
 .tip-labels {
@@ -167,20 +222,27 @@ input[type=number]:focus {
 
 /*RESET BUTTON*/
 #reset {
+    justify-self: flex-end;
     align-self: center;
     width: 100%;
-    margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    #reset {
+        margin-top: 30px;
+    }
 }
 
 #reset-btn {
     width: 100%;
     padding: 8px;
+    background-color: hsl(183, 43%, 24%);
     border-style: none;
     border-radius: 5px;
     font-family: 'Space Mono', monospace;
     font-size: 1em;
     font-weight: bold;
-    color: hsl(183, 100%, 15%);
+    color: hsl(184, 66%, 18%);
 }
 
 #reset-btn:hover {
@@ -189,4 +251,12 @@ input[type=number]:focus {
 
 .reset-btn-focus {
     background-color: hsl(172, 67%, 45%);
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+    
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }

@@ -5,17 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
+
   <link rel="stylesheet" href="design/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div id="bg-layer">
@@ -24,12 +17,12 @@
     </div>
     <div id="main-layer">
       <div id="col-left" class="columns">
-        <div id="section-a" class="col-left-sections">
+        <div id="input-section-a" class="col-left-sections">
           <label for="bill">Bill</label>
           <img src="images/icon-dollar.svg" alt="dollar icon">
           <input type="number" id="bill-input" name="bill" min="0" step="0.01" placeholder="0">
         </div>
-        <div id="section-b" class="col-left-sections">
+        <div id="input-section-b" class="col-left-sections">
           <label for="tip-perc">Select Tip %</label>
           <div id="tip-wrapper">
             <button class="tip-btn" name="tip-perc" value="5">5%</button>
@@ -40,8 +33,9 @@
             <input type="number" id="custom-input" name="tip-perc" min="0" placeholder="Custom">
           </div>
         </div>
-        <div id="section-c" class="col-left-sections">
+        <div id="input-section-c" class="col-left-sections">
           <label for="people">Number of People</label>
+          <span class="invalid-text"></span>
           <img src="images/icon-person.svg" alt="person icon">
           <input type="number" name="people" id="people-input" min="1" placeholder="0">
         </div>
@@ -66,7 +60,7 @@
           </div>
         </div>
         <div id="reset">
-          <button id="reset-btn" disabled>RESET</button>
+          <button id="reset-btn">RESET</button>
         </div>
       </div>
     </div>
