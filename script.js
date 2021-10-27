@@ -14,9 +14,8 @@ for(let btn of tipBtns) {
 
 //ADD EVENT LISTENER ON CUSTOM INPUT
 customInput.addEventListener('keydown', (e) => {
+    //IF ENTER KEY IS PRESSED
     if(e.key === "Enter") {
-        //IF ENTER KEY IS PRESSED PREVENT DEFAULT SUBMIT
-        e.preventDefault();
         //IF ELEMENT VALUE IS NOT VALID RESET OUTPUT DISPLAY
         if(customInput.value === "" && peopleInput.value > 0) {
             tipDisplay.textContent = '$0.00';
@@ -30,7 +29,7 @@ customInput.addEventListener('keydown', (e) => {
     }
 })
 
-//VALIDATION CHECK
+//VALIDATION CHECK FUNCTION
 function CheckValue(el) {
     //IF BOTH ELEMENT VALUES ARE VALID
     if(el.value !== "" && peopleInput.value > 0) {
