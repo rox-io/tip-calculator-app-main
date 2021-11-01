@@ -3,10 +3,9 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-/*1- BACKGROUND */
+/*1--- BACKGROUND ---*/
 
 /** BACKGROUND LAYER **/
-/*** Uses flexbox to stack items ***/
 #bg-layer {
     display: flex;
     flex-direction: column;
@@ -20,10 +19,9 @@ body {
     margin-bottom: 4em;
 }
 
-/*2- MAIN LAYER */
+/*2--- MAIN LAYER ---*/
 
 /** MAIN CONTAINER **/
-/*** Main container uses flexbox to stack items in a column ***/
 #main-layer {
     display: flex;
     flex-direction: column;
@@ -43,8 +41,6 @@ body {
     }
 }
 
-
-/*** On screens 768px and wider, the items no longer stack ***/
 @media only screen and (min-width: 768px) {
     #main-layer {
         flex-direction: row;
@@ -55,10 +51,9 @@ body {
     }
 }
 
-/*3- COLUMN A */
+/*3--- COLUMN A ---*/
 
 /** COLUMN A LAYOUT **/
-/*** Column A uses flexbox to stack items ***/
 #col-a {
     display: flex;
     flex-direction: column;
@@ -68,41 +63,35 @@ body {
     width: 90%;
 }
 
-/*** On screens 768px and wider, the width is changed using flex-basis property ***/
 @media only screen and (min-width: 768px) {
     #col-a {
         flex-basis: 44%;
     }
 }
 
-/*** Input sections use flexbox to stack items ***/
 #input-section-a, #input-section-c {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-/*** Images are positioned onto input elements using absolute positioning ***/
 #input-section-a img, #input-section-c img {
     position: absolute;
     top: 57%;
     left: 5%;
 }
 
-/*** Margin is added to input sections ***/
 #input-section-b, #input-section-c {
     margin-top: 30px;
     
 }
 
-/*** Label styling for column a ***/
 .col-a-sections label {
     color: hsl(186, 14%, 43%);
     font-size: .8em;
     font-weight: bold;
 }
 
-/*** Styling for all number input elements ***/
 input[type=number] {
     border: none;
     border-radius: 5px;
@@ -123,20 +112,17 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/*** Changes default border style of focused input element***/
 input[type=number]:focus {
     outline: 3px solid hsl(172, 67%, 45%);
     border-radius: 2px;
 }
 
-/*** Custom size of input element ***/ 
 #custom-btn input {
     margin-top: 0;
     padding: 7px 7px 7px 0;
 }
 
 /** TIP BUTTONS **/
-/*** Tip buttons container uses grid to create 2 columns ***/
 #tip-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -144,7 +130,6 @@ input[type=number]:focus {
     margin-top: 10px;    
 }
 
-/*** On screens 768px and wider, 3 columns are created ***/
 @media only screen and (min-width: 768px) {
     #tip-wrapper {
         grid-template-columns: repeat(3, 1fr);
@@ -152,7 +137,6 @@ input[type=number]:focus {
     }
 }
 
-/*** Styling for tip buttons ***/
 .tip-btn {
     background-color: hsl(183, 100%, 15%);
     color: hsl(189, 41%, 97%);
@@ -164,7 +148,6 @@ input[type=number]:focus {
     padding: .2em .8em;
 }
 
-/*** On screens 768px and wider, font size is decreased ***/
 @media only screen and (min-width: 768px) {
     .tip-btn {
         font-size: 1.2em;
@@ -172,25 +155,21 @@ input[type=number]:focus {
     }
 }
 
-/*** Changes color of button on hover ***/
 .tip-btn:hover {
     background-color: #a0f5f8;
     color: black;
 }
 
-/*** Changes color of button on focus ***/
 .tip-btn:focus {
     background-color: hsl(172, 67%, 45%);
     color: black;
 }
 
 /** JS STYLING IN COLUMN-A **/
-/*** this class is added to input element when function is called ***/
 .invalid-border {
     outline: 3px solid rgb(201, 81, 11);
 }
 
-/*** this class is added to element when function is called ***/
 .invalid-text {
     width: 39%;
     color: rgb(201, 81, 11);
@@ -201,10 +180,9 @@ input[type=number]:focus {
     text-align: right;
 }
 
-/*4- COLUMN-B */
+/*4--- COLUMN-B ---*/
 
 /** COLUMN-B LAYOUT **/
-/*** Column b uses flexbox to stack items ***/
 #col-b {
     display: flex;
     flex-direction: column;
@@ -218,7 +196,6 @@ input[type=number]:focus {
     width: 85%;
 }
 
-/*** On screens 768px and wider, column b is resized ***/
 @media only screen and (min-width: 768px) {
     #col-b {
         flex-basis: 44%;
@@ -228,13 +205,11 @@ input[type=number]:focus {
 }
 
 /** TIP AND TOTAL AMOUNT DISPLAY LAYOUT **/
-/*** Tip display container uses grid to create 2 columns ***/
 .tip-display-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-/*** On screens 768px and wider, margin is added for spacing ***/
 @media only screen and (min-width: 768px) {
     .tip-display-wrapper {
         margin-bottom: 30px;
@@ -242,29 +217,24 @@ input[type=number]:focus {
 }
 
 /** TIP AND TOTAL AMOUNT DISPLAY STYLING **/
-/*** Text alignment for tip label element ***/
 .tip-labels {
     text-align: left;
 }
 
-/*** Removes default margin for label elements ***/
 #tip-label, #total-label {
     margin: 0;
 }
 
-/*** Styling for tip person element ***/
 .tip-person {
     font-weight: bold;
     color: hsl(184, 14%, 56%);
     font-size: .8em;
 }
 
-/*** Text align tip amount element ***/
 .tip-amounts {
     text-align: right;
 }
 
-/*** Styling for tip amount element ***/
 .tip-amount {
     font-size: 2em;
     font-weight: bold;
@@ -272,20 +242,17 @@ input[type=number]:focus {
 }
 
 /**RESET BUTTON**/
-/*** Alignment for reset button ***/
 #reset {
     align-self: center;
     width: 100%;
 }
 
-/*** On screens 768px and wider, add margin to top of reset button ***/
 @media only screen and (min-width: 768px) {
     #reset {
         margin-top: 30px;
     }
 }
 
-/*** Styling for reset button ***/
 #reset-btn {
     width: 100%;
     padding: 8px;
@@ -298,7 +265,6 @@ input[type=number]:focus {
     color: hsl(184, 66%, 18%);
 }
 
-/*** On hover, change background color for reset button ***/
 #reset-btn:hover {
     background-color: #a0f5f8;
 }
