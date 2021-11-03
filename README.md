@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: 
+- Live site URL: https://rox-io.github.io/tip-calculator-app-main/
 
 ## My process
 
