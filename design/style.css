@@ -2,6 +2,7 @@ body {
     font-family: 'Space Mono', monospace;
     margin: 0;
     box-sizing: border-box;
+    background-color: hsl(185, 41%, 84%);
 }
 /*1--- BACKGROUND ---*/
 
@@ -11,18 +12,21 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: hsl(185, 41%, 84%);
     padding: 8em 1em;
 }
-/** HEADER LOGO **/
-#header-img {
-    margin-bottom: 4em;
+/** HEADING **/
+#heading {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 3em;
+    color: hsl(187, 15%, 32%);
 }
 
-/*2--- MAIN LAYER ---*/
+/*2--- CARD LAYER ---*/
 
-/** MAIN CONTAINER **/
-#main-layer {
+/** CARD CONTAINER **/
+#card-layer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -35,14 +39,14 @@ body {
 }
 
 @media only screen and (min-width: 480px) {
-    #main-layer {
+    #card-layer {
         width: 480px;
         
     }
 }
 
 @media only screen and (min-width: 768px) {
-    #main-layer {
+    #card-layer {
         flex-direction: row;
         justify-content: space-between;
         width: 690px;
@@ -167,16 +171,18 @@ input[type=number]:focus {
 .tip-btn:hover {
     background-color: #a0f5f8;
     color: black;
+    cursor: grab;
 }
 
-.tip-btn:focus {
+.tip-btn-selected {
     background-color: hsl(172, 67%, 45%);
     color: black;
 }
 
 /** JS STYLING IN COLUMN-A **/
-.invalid-border {
+.invalid-input-border {
     outline: 3px solid rgb(201, 81, 11);
+    border-radius: 2px;
 }
 
 .invalid-text {
@@ -231,6 +237,7 @@ input[type=number]:focus {
 }
 
 #tip-label, #total-label {
+    font-weight: bold;
     margin: 0;
 }
 
@@ -245,7 +252,7 @@ input[type=number]:focus {
 }
 
 .tip-amount {
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: bold;
     color: hsl(172, 67%, 45%);
 }
@@ -276,10 +283,12 @@ input[type=number]:focus {
 
 #reset-btn:hover {
     background-color: #a0f5f8;
+    cursor: grab;
 }
 
 /* ATTRIBUTION TEXT STYLING */
 .attribution {
+    height: max-content;
     font-size: 11px; text-align: center;
 }
     
