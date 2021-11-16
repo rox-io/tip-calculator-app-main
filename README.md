@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/tip-calculator-app-built-using-flexbox-and-css-grid-RkcgoSbBM
+- Live site URL: https://rox-io.github.io/tip-calculator-app-main/
 
 ## My process
 
