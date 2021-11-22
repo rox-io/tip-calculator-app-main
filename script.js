@@ -34,6 +34,7 @@ for(let btn of tipBtns) {
     btn.addEventListener('click', (e) => {
         focusedBtn(tipBtns, e.target);
         tipPerc = parseFloat(e.target.value);
+        customInput.value = "";
         if(peopleInputValue !== 0) {
             calculateBill();
         }
