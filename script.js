@@ -20,7 +20,6 @@ billInput.addEventListener('input', (e) => {
     if(Number.isInteger(parseFloat(e.target.value)) && parseFloat(e.target.value) !== 0) {
         if(peopleInputValue !== 0) {
             calculateBill();
-            resetBtn.style="background-color: hsl(172, 67%, 45%)";
         }
         else {
             invalid();
@@ -37,6 +36,7 @@ for(let btn of tipBtns) {
         customInput.value = "";
         if(peopleInputValue !== 0) {
             calculateBill();
+
         }
         else {
             invalid();
@@ -68,11 +68,11 @@ peopleInput.addEventListener('input', (e) => {
 })
 
 //FUNCTIONS
-function focusedBtn(tipBtn, active) {
+function focusedBtn(tipBtn, selectedBtn) {
     for(let btn of tipBtn) {
         btn.classList.remove("tip-btn-selected");
     }
-    active.classList.add("tip-btn-selected");
+    selectedBtn.classList.add("tip-btn-selected");
 }
 
 function removeFocus(tipBtn) {
@@ -87,6 +87,7 @@ function calculateBill() {
     totalPerPerson = totalTip + split;
     tipDisplay.textContent =  "$" + (Math.round(totalTip * 100) / 100).toFixed(2);
     totalDisplay.textContent =  "$" + (Math.round(totalPerPerson * 100) / 100).toFixed(2);
+    resetBtn.style="background-color: hsl(172, 67%, 45%)";
 }
 
 function invalid() {
